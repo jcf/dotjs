@@ -55,8 +55,8 @@ example, and executes the returned JavaScript.
 ## Requires
 
 - OS X
-- Ruby 1.8
-- rake (gem install rake)
+- Ruby 1.9+
+- Rake (`gem install rake`)
 - Google Chrome
 - `/usr/local/bin` in your $PATH
 
