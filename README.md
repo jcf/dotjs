@@ -1,5 +1,10 @@
 # dotjs
 
+This fork intends to update **dotjs** to ensure it works in recent versions of
+Google Chrome, without changing the philosophy of keeping Javascript in `~/.js`.
+
+---
+
 dotjs is a Google Chrome extension that executes JavaScript files in `~/.js`
 based on their filename.
 
