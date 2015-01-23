@@ -147,3 +147,11 @@ namespace :jquery do
              'ext/jquery.js'
   end
 end
+
+namespace :daemon do
+  desc 'Reload djsd'
+  task :reload => 'install:daemon' do
+    sh 'launchctl unload ~/Library/LaunchAgents/com.github.dotjs.plist'
+    sh 'launchctl load ~/Library/LaunchAgents/com.github.dotjs.plist'
+  end
+end
