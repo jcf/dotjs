@@ -1,0 +1,9 @@
+{
+  "strict": true,
+  "evil": true,
+  "globals": {
+    "jQuery": false,
+    "location": false,
+    "console": false
+  }
+}
