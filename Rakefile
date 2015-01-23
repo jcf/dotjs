@@ -141,3 +141,19 @@ task :install_dir_writeable do
     abort "Error: Can't write to #{DAEMON_INSTALL_DIR}. Try again using `sudo`."
   end
 end
+
+def download(url, target)
+  require 'net/http'
+  open(target, 'w') do |f|
+    f.write Net::HTTP.get(URI(url))
+  end
+end
+
+JQUERY_VERSION = '2.1.3'
+namespace :jquery do
+  desc "Download version #{JQUERY_VERSION} of jQuery"
+  task :download do
+    download "http://code.jquery.com/jquery-#{JQUERY_VERSION}.min.js",
+             'ext/jquery.js'
+  end
+end
